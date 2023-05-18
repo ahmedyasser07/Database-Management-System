@@ -1,0 +1,26 @@
+package Backend;
+
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+public class Tuple {
+
+	private transient Table parentTable;
+	private transient Triplet[] fields;
+	private Dictionary <String,String> columnValue = new Hashtable<String,String>();
+	
+	public Tuple(Table parentTable) {
+		this.parentTable = parentTable;
+		this.fields = parentTable.getFields();
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package Backend.Index;
+
+public class Reference {
+	
+	String fileName;
+	Object pkValue;
+	
+	public Reference(String fileName, Object pkValue) {
+		
+		this.fileName=fileName;
+		this.pkValue=pkValue;
+	}
+
+}

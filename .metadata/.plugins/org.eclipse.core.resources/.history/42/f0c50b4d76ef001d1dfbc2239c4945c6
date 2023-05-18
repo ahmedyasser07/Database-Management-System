@@ -1,0 +1,9 @@
+package Backend.Index;
+
+public class Dimension {
+
+	String columnName;
+	Object columnMin;
+	Object columnMax;
+	
+}

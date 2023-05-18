@@ -1,0 +1,17 @@
+package Backend.Index;
+
+public class Dimension {
+
+	String columnName;
+	String columnType;
+	String columnMin;
+	String columnMax;
+	
+	public Dimension(String columnName, String columnType, String columnMin, String columnMax) {
+		this.columnName=columnName;
+		this.columnType=columnType;
+		this.columnMin=columnMin;
+		this.columnMax=columnMax;
+	}
+	
+}

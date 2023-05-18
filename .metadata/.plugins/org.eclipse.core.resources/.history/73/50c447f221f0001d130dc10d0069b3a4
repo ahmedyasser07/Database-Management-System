@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class test {
+	
+	
+	public static String getMedian(String str1, String str2) {
+		  // Check if the strings are empty
+		  if (str1.isEmpty() || str2.isEmpty()) {
+		    return "";
+		  }
+
+		  // Get the lengths of the strings
+		  int len1 = str1.length();
+		  int len2 = str2.length();
+
+		  // If the strings have the same length, just return the middle character
+		  if (len1 == len2) {
+		    return str1.charAt(len1 / 2) + "";
+		  }
+
+		  // If the first string is shorter, pad it with spaces on the right
+		  if (len1 < len2) {
+		    str1 = str1 + " ".repeat(len2 - len1);
+		  }
+
+		  // If the second string is shorter, pad it with spaces on the left
+		  if (len2 < len1) {
+		    str2 = " ".repeat(len1 - len2) + str2;
+		  }
+
+		  // Get the middle character of the concatenated strings
+		  int midIndex = (len1 + len2) / 2;
+		  char midChar = str1.charAt(midIndex);
+
+		  // Return the middle character
+		  return midChar + "";
+		}
+
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+//		System.out.print(calculateMedian("aa","ca"));
+		
+		String mid = getMedian("a", "sa");
+		System.out.println(mid);
+		
+	}
+	
+	
+	
+
+}

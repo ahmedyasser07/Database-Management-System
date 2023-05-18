@@ -1,0 +1,5 @@
+Table Name, Column Name, Column Type, ClusteringKey, IndexName,IndexType, min, max
+Students,Name,class java.lang.String,false,StudentsNamebirthdayGPAindex,Octree,a,ZZZZ
+Students,ID,class java.lang.Integer,true,null,null,0,10000
+Students,birthday,class java.util.Date,false,StudentsNamebirthdayGPAindex,Octree,Thu Jan 01 02:00:00 EET 1970,Wed Jan 01 00:00:00 EET 2025
+Students,GPA,class java.lang.Double,false,StudentsNamebirthdayGPAindex,Octree,0.0,4.0

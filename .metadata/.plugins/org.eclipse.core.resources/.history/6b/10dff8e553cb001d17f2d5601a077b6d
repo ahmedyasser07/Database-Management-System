@@ -1,0 +1,37 @@
+package Backend;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+public class Table implements Serializable{
+	
+	//attributes
+	private transient int currentNumOfRows;
+	private String tableName;
+	private Hashtable<String, String> fields= new Hashtable<String, String>();
+	private String clusteringKey;
+	private Hashtable<String, String> minValues = new Hashtable<String, String>();
+	private Hashtable<String, String> maxValues = new Hashtable<String, String>();
+	
+	
+	//constructor
+	public Table(String tableName,String clusteringKey, Hashtable<String, String>  fields, Hashtable<String, String> minValues, Hashtable<String, String> maxValues) {
+		this.currentNumOfRows = 0;
+		this.tableName = tableName;
+		this.fields = fields;
+		this.clusteringKey = clusteringKey;
+		this.minValues = minValues;
+		this.maxValues = maxValues;
+		
+		
+	}
+	
+	
+	public Hashtable<String, String> getFields() {
+		return this.fields;
+	}
+
+
+}

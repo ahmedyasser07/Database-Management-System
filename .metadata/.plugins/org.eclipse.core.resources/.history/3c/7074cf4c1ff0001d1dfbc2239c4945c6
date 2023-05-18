@@ -1,0 +1,33 @@
+
+public class test {
+	
+	
+	public static String findMidpoint(String S, String T) {
+	    int minLength = Math.min(S.length(), T.length());
+	    StringBuilder midpoint = new StringBuilder();
+
+	    for (int i = 0; i < minLength; i++) {
+	        char sChar = S.charAt(i);
+	        char tChar = T.charAt(i);
+
+	        if (sChar == tChar) {
+	            midpoint.append(sChar);
+	        } else {
+	            midpoint.append((char) (sChar + 1));
+	            break;
+	        }
+	    }
+
+	    return midpoint.toString();
+	}
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.print(findMidpoint("aa","baa"));
+	}
+
+}

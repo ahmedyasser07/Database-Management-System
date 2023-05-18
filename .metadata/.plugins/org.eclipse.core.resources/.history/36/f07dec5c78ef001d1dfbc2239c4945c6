@@ -1,0 +1,31 @@
+package Backend.Index;
+
+public class Node{
+
+	Reference[] references;
+	Node[] children;
+	Comparable xMin;
+	Comparable xMax;
+	Comparable yMin;
+	Comparable yMax;
+	Comparable zMin;
+	Comparable zMax;
+	int capacity;
+
+	public Node(Comparable xMin, Comparable xMax, Comparable yMin, Comparable yMax,
+			Comparable zMin, Comparable zMax) {
+
+		this.children = new Node[8];
+		this.capacity = 10;
+		this.references = new Reference[capacity];
+		
+		this.xMin = xMin;
+		this.xMax = xMax;
+		this.yMin = yMin;
+		this.yMax = yMax;
+		this.zMin = zMin;
+		this.zMax = zMax;
+	
+	}
+
+}

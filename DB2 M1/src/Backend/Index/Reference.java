@@ -1,0 +1,53 @@
+package Backend.Index;
+
+import java.io.Serializable;
+
+public class Reference implements Serializable{
+
+	public String fileName;
+	public Object pkValue;
+	public Comparable xValue;
+	public Comparable yValue;
+	public Comparable zValue;
+	
+	public Reference(String fileName, Object pkValue, Comparable xValue, Comparable yValue, Comparable zValue) {
+
+		this.fileName = fileName;
+		this.pkValue = pkValue;
+		this.xValue = xValue;
+		this.yValue = yValue;
+		this.zValue = zValue;
+	}
+	
+	
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+
+	public void setxValue(Comparable xValue) {
+		this.xValue = xValue;
+	}
+
+
+	public void setyValue(Comparable yValue) {
+		this.yValue = yValue;
+	}
+
+
+	public void setzValue(Comparable zValue) {
+		this.zValue = zValue;
+	}
+
+
+
+	
+	
+	
+	@Override
+	public String toString() {
+	    return "Reference(file=" + fileName + ", pkValue=" + pkValue + ", xValue=" + xValue + ", yValue=" + yValue + ", zValue=" + zValue + ")";
+	}
+
+
+}

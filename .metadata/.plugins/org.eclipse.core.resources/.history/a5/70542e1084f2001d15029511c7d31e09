@@ -1,0 +1,49 @@
+package Backend;
+
+import java.io.Serializable;
+import java.util.Hashtable;
+
+public class Tuple implements Serializable, Comparable{
+
+//	private transient Table parentTable;
+//	private transient Hashtable<String, String> fields= new Hashtable<String, String>();
+	public Hashtable<String,Object> column_Value = new Hashtable<String,Object>();
+	
+
+
+	public Tuple(Hashtable<String,Object> column_Value ) {
+		
+//		this.parentTable = parentTable;
+//		this.fields = parentTable.getFields();		
+		this.column_Value=column_Value;
+		
+	}
+	
+	
+	
+	public void setColumn_Value(Hashtable<String, Object> column_Value) {
+		this.column_Value = column_Value;
+	}
+	
+	public Hashtable<String,Object> getTupleColumnValues(){
+		return this.column_Value;
+	}
+
+
+
+	@Override
+	public int compareTo(Object o ) {
+		// TODO Auto-generated method stub
+		
+		Tuple t = (Tuple) o;
+		
+		Comparable myPKValue = this.column_Value
+		
+		
+		
+		return 0;
+	}
+
+
+
+}

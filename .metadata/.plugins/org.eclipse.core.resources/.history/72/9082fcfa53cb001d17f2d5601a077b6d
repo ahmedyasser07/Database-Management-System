@@ -1,0 +1,83 @@
+package Backend;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
+
+public class Table implements Serializable{
+	
+	//attributes
+	private transient int currentNumOfRows;
+	private String tableName;
+	private Hashtable<String, String> fields= new Hashtable<String, String>();
+	private String clusteringKey;
+	private Hashtable<String, String> minValues = new Hashtable<String, String>();
+	private Hashtable<String, String> maxValues = new Hashtable<String, String>();
+	
+	
+	//constructor
+	public Table(String tableName,String clusteringKey, Hashtable<String, String>  fields, Hashtable<String, String> minValues, Hashtable<String, String> maxValues) {
+		this.currentNumOfRows = 0;
+		this.tableName = tableName;
+		this.fields = fields;
+		this.clusteringKey = clusteringKey;
+		this.minValues = minValues;
+		this.maxValues = maxValues;
+		
+		
+	}
+	
+	
+	public int getCurrentNumOfRows() {
+		return currentNumOfRows;
+	}
+
+
+	public void setCurrentNumOfRows(int currentNumOfRows) {
+		this.currentNumOfRows = currentNumOfRows;
+	}
+
+
+	public String getTableName() {
+		return tableName;
+	}
+
+
+	public String getClusteringKey() {
+		return clusteringKey;
+	}
+
+
+
+	public Hashtable<String, String> getMinValues() {
+		return minValues;
+	}
+
+
+	public void setMinValues(Hashtable<String, String> minValues) {
+		this.minValues = minValues;
+	}
+
+
+	public Hashtable<String, String> getMaxValues() {
+		return maxValues;
+	}
+
+
+	public void setMaxValues(Hashtable<String, String> maxValues) {
+		this.maxValues = maxValues;
+	}
+
+
+	public void setFields(Hashtable<String, String> fields) {
+		this.fields = fields;
+	}
+
+
+	public Hashtable<String, String> getFields() {
+		return this.fields;
+	}
+
+
+}

@@ -1,0 +1,20 @@
+package Backend.Index;
+
+public class Reference {
+
+	String fileName;
+	Object pkValue;
+	Comparable xValue;
+	Comparable yValue;
+	Comparable zValue;
+
+	public Reference(String fileName, Object pkValue, Comparable xValue, Comparable yValue, Comparable zValue) {
+
+		this.fileName = fileName;
+		this.pkValue = pkValue;
+		this.xValue = xValue;
+		this.yValue = yValue;
+		this.zValue = zValue;
+	}
+
+}
